@@ -7,6 +7,8 @@ def main():
                                      usage='python %(prog)s [-h]')
     parser.add_argument("action", choices=['action1'],
                         help="action to perform; {action1}: action1 description")
+    parser.add_argument("--download", action='store_true',
+                        help="Download PDB sequences")
     parser.add_argument("-d", "--directory",
                         help="Output directory, defaults to current date: year_month_day/")
     parser.add_argument("-value", default=1e-20, type=float,
